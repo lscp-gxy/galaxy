@@ -36,7 +36,7 @@ export function _setUserLocale(user, config) {
 
     const locale = user_locale || nav_locale || global_locale;
 
-    sessionStorage.setItem("currentLocale", locale);
+    sessionStorage.setItem("currentLocale", false);
 }
 
 export function _getUserLocale(user, config) {

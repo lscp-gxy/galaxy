@@ -144,7 +144,7 @@ GalaxyApp.prototype._initUserLocale = function _initUserLocale(options) {
 
     const locale = user_locale || nav_locale || global_locale;
 
-    sessionStorage.setItem("currentLocale", locale);
+    sessionStorage.setItem("currentLocale", false);
 };
 
 /** set up the current user as a Backbone model (mvc/user/user-model) */

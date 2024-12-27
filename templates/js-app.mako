@@ -17,14 +17,14 @@
         <meta name="description" content="${meta_description}" />
 
         <title>
-            Galaxy
+            之江实验室生命科学计算中心
             %if app.config.brand:
             | ${app.config.brand}
             %endif
         </title>
 
         ## relative href for site root
-        <link rel="index" href="${ h.url_for( '/' ) }"/>
+        <link rel="icon" href="${ h.url_for( '/static/logo.svg' ) }"/>
 
         ## TODO: use loaders to move everything but the essentials below the fold
         ${ h.dist_css(
