@@ -13,6 +13,8 @@ import ExternalLink from "../ExternalLink.vue";
 import HelpText from "../Help/HelpText.vue";
 import UploadContainer from "./UploadContainer.vue";
 
+import _l from "@/utils/localization";
+
 const { currentUser } = storeToRefs(useUserStore());
 const { currentHistoryId, currentHistory } = useUserHistories(currentUser);
 
@@ -20,7 +22,7 @@ const { config, isConfigLoaded } = useConfig();
 
 function getDefaultOptions() {
     const baseOptions = {
-        title: "Upload from Disk or Web",
+        title: _l("Upload from Disk or Web"),
         modalStatic: true,
         callback: null,
         immediateUpload: false,

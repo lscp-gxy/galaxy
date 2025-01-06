@@ -33,6 +33,8 @@ import ContentItem from "@/components/History/Content/ContentItem.vue";
 import ListingLayout from "@/components/History/Layout/ListingLayout.vue";
 import LoadingSpan from "@/components/LoadingSpan.vue";
 
+import _l from "@/utils/localization";
+
 interface BackendFilterError {
     err_msg: string;
     err_code: number;
@@ -458,7 +460,7 @@ function arrowNavigate(item: HistoryItemSummary, eventKey: string) {
                     :key="props.history.id"
                     class="content-operations-filters mx-3"
                     name="History Items"
-                    placeholder="search datasets"
+                    :placeholder="_l('search datasets')"
                     :filter-class="filterClass"
                     :filter-text.sync="filterText"
                     :loading="isLoading"

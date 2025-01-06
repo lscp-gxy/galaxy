@@ -2,6 +2,7 @@
 import { BNavbar, BNavbarBrand, BNavbarNav } from "bootstrap-vue";
 import { storeToRefs } from "pinia";
 import { userLogout } from "utils/logout";
+import { setUserLocaleSelf } from "utils/localization";
 import { withPrefix } from "utils/redirect";
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router/composables";
@@ -13,6 +14,8 @@ import { loadWebhookMenuItems } from "./_webhooks";
 import MastheadDropdown from "./MastheadDropdown";
 import MastheadItem from "./MastheadItem";
 import QuotaMeter from "./QuotaMeter";
+
+import _l from "@/utils/localization";
 
 const { isAnonymous, currentUser } = storeToRefs(useUserStore());
 
@@ -143,6 +146,37 @@ onMounted(() => {
                     },
                 ]"
                 @click="userLogout" />
+            <MastheadDropdown
+                id="language"
+                icon="fa-solid fa-wand-magic-sparkles"
+                :title="_l('language')"
+                tooltip="please choose"
+                :menu="[
+                    {
+                        title: _l('Chinese'),
+                        handler: () => setUserLocaleSelf('zh-cn')
+                    },
+                    {
+                        title: _l('English'),
+                        handler: () => setUserLocaleSelf('en')
+                    },
+                    {
+                        title: _l('French'),
+                        handler: () => setUserLocaleSelf('fr')
+                    },
+                    {
+                        title: _l('Spanish'),
+                        handler: () => setUserLocaleSelf('es')
+                    },
+                    {
+                        title: _l('German'),
+                        handler: () => setUserLocaleSelf('de')
+                    },
+                    {
+                        title: _l('Japanese'),
+                        handler: () => setUserLocaleSelf('ja')
+                    }
+                ]" />
         </BNavbarNav>
         <Icon v-else icon="spinner" class="fa-spin mr-2 text-light" />
     </BNavbar>

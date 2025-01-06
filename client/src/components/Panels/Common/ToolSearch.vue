@@ -34,7 +34,7 @@ const props = defineProps({
     },
     placeholder: {
         type: String,
-        default: "search tools",
+        default: _l("search tools")
     },
     query: {
         type: String,
