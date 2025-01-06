@@ -34,9 +34,12 @@ export function _setUserLocale(user, config) {
             ? "__root"
             : (navigator.language || navigator.userLanguage || "__root").toLowerCase();
 
-    const locale = user_locale || nav_locale || global_locale;
 
-    sessionStorage.setItem("currentLocale", false);
+    const session_locale = sessionStorage.getItem("currentLocale") || false;
+
+    const locale = session_locale || user_locale || nav_locale || global_locale;
+
+    sessionStorage.setItem("currentLocale", locale);
 }
 
 export function _getUserLocale(user, config) {
@@ -50,5 +53,13 @@ export function _getUserLocale(user, config) {
     }
     return locale;
 }
+
+
+export function setUserLocaleSelf(language) {
+    sessionStorage.setItem('currentLocale', language)
+    window.location.reload(true);
+}
+
+
 
 export default localize;

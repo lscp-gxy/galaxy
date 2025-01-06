@@ -16,6 +16,8 @@ import LoadingSpan from "@/components/LoadingSpan.vue";
 import StatelessTags from "@/components/TagsMultiselect/StatelessTags.vue";
 import UtcDate from "@/components/UtcDate.vue";
 
+import _l from "@/utils/localization";
+
 const historyStore = useHistoryStore();
 const { currentHistoryId } = storeToRefs(historyStore);
 

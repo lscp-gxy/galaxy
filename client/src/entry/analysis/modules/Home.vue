@@ -3,7 +3,8 @@
         <ToolForm v-if="isTool && !isUpload" v-bind="toolParams" />
         <WorkflowRun v-else-if="isWorkflow" v-bind="workflowParams" />
         <div v-else-if="isController" :src="controllerParams" />
-        <CenterFrame v-else src="/welcome" />
+        <CenterFrame v-else-if="isChinese" src="/static/welcome_zh.html" />
+        <CenterFrame v-else src="/static/welcome.html" />
     </div>
 </template>
 
@@ -74,6 +75,12 @@ export default {
                 simpleFormTargetHistory,
                 simpleFormUseJobCache,
             };
+        },
+        isChinese() {
+            let zh_arr = ['zh', 'zh-cn'];
+            let local = sessionStorage.getItem("currentLocale").toLowerCase()
+            let index = zh_arr.includes(local);
+            return index || false
         },
     },
 };

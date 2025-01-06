@@ -145,7 +145,7 @@ async function resumePausedJobs() {
         <nav
             :class="{ 'd-flex justify-content-between mx-3 my-2': !props.minimal }"
             aria-label="current history management">
-            <h2 v-if="!props.minimal" class="m-1 h-sm">History</h2>
+            <h2 v-localize v-if="!props.minimal" class="m-1 h-sm">History</h2>
 
             <BButtonGroup>
                 <BButton

@@ -24,10 +24,10 @@ define({
     "How to Cite Galaxy": "引用",
     "Interactive Tours": "使用引导",
     User: "账号管理",
-    Login: "登陆",
+    Login: "登录",
     Register: "注册",
-    "Log in or Register": "注册登陆",
-    "Signed in as": "您已登陆为",
+    "Log in or Register": "注册登录",
+    "Signed in as": "您已登录为",
     Preferences: "用户偏好性",
     "Custom Builds": "自定义构建集",
     Logout: "退出",
@@ -86,7 +86,7 @@ define({
 
     // ---- history-model
     // ---- history-view
-    "This history is empty": "您的历史记录为空",
+    "This history is empty.": "您的历史记录为空。",
     "No matching datasets found": "未找到匹配的数据集",
     "An error occurred while getting updates from the server": "服务器更新时出现错误",
     "Please contact a Galaxy administrator if the problem persists": "如果问题仍然存在，请联系 Galaxy 管理员",
@@ -127,8 +127,10 @@ define({
     "You can <% loadYourOwn %> or <% externalSource %>": "您可以 <% loadYourOwn %> 或者 <% externalSource %>",
     "You can ": "您可以 ",
     " or ": " 或者 ",
+    "or": " 或者 ",
     "load your own data": "上传您的个人数据",
     "get data from an external source": "从其他来源上传数据.",
+    "You can load your own data": "您可以加载自己的数据",
 
     // these aren't in zh/ginga.po and the template doesn't localize
     "Include Deleted Datasets": "包括删除数据集",
@@ -233,7 +235,8 @@ define({
     Groups: false,
     "API keys": false,
     "Impersonate a user": false,
-    Data: false,
+    // Data: false,
+    Data: "数据",
     Quotas: false,
     Roles: false,
     "Local data": false,
@@ -404,7 +407,8 @@ define({
     // ---------------------------------------------------------------------------- circster
     "Could Not Save": false,
     "Saving...": false,
-    Settings: false,
+    //Settings: false,
+    Settings: "设置",
     "Add tracks": false,
     // ---------------------------------------------------------------------------- trackster
     "New Visualization": false,
@@ -466,7 +470,46 @@ define({
     "Download from URL or upload files from disk": "从 URL 或者本地磁盘上传文件",
     // ---------------------------------------------------------------------------- workflow_editor_tests
     "tool tooltip": false,
-    // ----------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------- Language
+    "Language": "语言",
+    "Please choose": "请选择",
+    "Chinese": "中文",
+    "English": "英语",
+    "French": "法语",
+    "Spanish": "西班牙语",
+    "German": "德语",
+    "Japanese": "日语",
+
+    "Upload": "上传",
+    "Tools": "工具",
+    "Workflows": "工作流",
+    "Workflow Invocations": "工作流程调用",
+    "History Multiview": "历史多视图",
+    "Notifications": "通知",
+    "Search and run tools": "搜索和运行工具",
+    "Search and run workflows": "搜索和运行工作流",
+    "Show all workflow runs": "显示所有工作流程运行",
+    "Show all histories": "显示所有历史记录",
+    "Select histories to show in History Multiview": "选择要在历史记录多视图中显示的历史记录",
+    "Show all datasets": "显示所有数据集",
+    "Show all pages": "显示所有页面",
+    "Edit preferences": "编辑偏好",
+    "Administer this Galaxy": "管理Galaxy",
+
+    "search tools": "搜索工具",
+    "Access resources": "访问资源",
+
+    "Community Hub": "社区中心",
+    "About": "关于",
+
+    "Upload from Disk or Web": "从磁盘或网页上传",
+    "Drop files here": "拖拽文件到此处",
+    "Choose remote files": "选择远程文件",
+    "Regular": "常规",
+    "Composite": "综合",
+
+    "More": "更多",
+    "View additional activities":"查看其它活动",
 
     ja: true,
     fr: true,

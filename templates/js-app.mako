@@ -17,7 +17,7 @@
         <meta name="description" content="${meta_description}" />
 
         <title>
-            之江实验室生命科学计算中心
+            之江实验室生命科学计算研究中心
             %if app.config.brand:
             | ${app.config.brand}
             %endif
