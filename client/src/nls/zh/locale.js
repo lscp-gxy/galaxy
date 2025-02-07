@@ -510,6 +510,7 @@ define({
 
     "More": "更多",
     "View additional activities":"查看其它活动",
+    "Please choose language": "请选择语言",
 
     ja: true,
     fr: true,

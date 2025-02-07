@@ -15,7 +15,7 @@ import MastheadDropdown from "./MastheadDropdown";
 import MastheadItem from "./MastheadItem";
 import QuotaMeter from "./QuotaMeter";
 
-import _l from "@/utils/localization";
+import localize from "@/utils/localization";
 
 const { isAnonymous, currentUser } = storeToRefs(useUserStore());
 
@@ -69,6 +69,7 @@ function onWindowToggle() {
 onMounted(() => {
     loadWebhookMenuItems(extensionTabs.value);
 });
+
 </script>
 
 <template>
@@ -132,15 +133,15 @@ onMounted(() => {
                 class="loggedin-only"
                 icon="fa-user"
                 :title="currentUser.username"
-                tooltip="User Preferences"
+                :tooltip="localize('User Preferences')"
                 :menu="[
                     {
-                        title: 'Preferences',
+                        title: localize('Preferences'),
                         icon: 'fa-gear',
                         handler: () => openUrl('/user'),
                     },
                     {
-                        title: 'Sign Out',
+                        title: localize('Sign Out'),
                         icon: 'fa-sign-out-alt',
                         handler: () => userLogout(),
                     },
@@ -148,32 +149,32 @@ onMounted(() => {
                 @click="userLogout" />
             <MastheadDropdown
                 id="language"
-                icon="fa-solid fa-wand-magic-sparkles"
-                :title="_l('language')"
-                tooltip="please choose"
+                icon="fa-solid fa-language fa-xl"
+                title=""
+                :tooltip="localize('Please choose language')"
                 :menu="[
                     {
-                        title: _l('Chinese'),
+                        title: localize('Chinese'),
                         handler: () => setUserLocaleSelf('zh-cn')
                     },
                     {
-                        title: _l('English'),
+                        title: localize('English'),
                         handler: () => setUserLocaleSelf('en')
                     },
                     {
-                        title: _l('French'),
+                        title: localize('French'),
                         handler: () => setUserLocaleSelf('fr')
                     },
                     {
-                        title: _l('Spanish'),
+                        title: localize('Spanish'),
                         handler: () => setUserLocaleSelf('es')
                     },
                     {
-                        title: _l('German'),
+                        title: localize('German'),
                         handler: () => setUserLocaleSelf('de')
                     },
                     {
-                        title: _l('Japanese'),
+                        title: localize('Japanese'),
                         handler: () => setUserLocaleSelf('ja')
                     }
                 ]" />
