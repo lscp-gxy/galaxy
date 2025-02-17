@@ -27,6 +27,8 @@ jobs:
             echo "name=dev" >> $GITHUB_OUTPUT
           elif [[ "$GITHUB_REF" == "refs/heads/release_"* ]]; then
             echo "name=${GITHUB_REF#refs/heads/release_}-auto" >> $GITHUB_OUTPUT
+          elif [[ "$GITHUB_REF" == "refs/heads/zj_"* ]]; then
+            echo "name=${GITHUB_REF#refs/heads/zj_}-auto" >> $GITHUB_OUTPUT
           fi
         shell: bash
       - name: Build container image
